@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0"
+    android:orientation="vertical">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/pageWrap"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/pageWrap"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+
+                <LinearLayout
+                    style="@style/page_body">
+
+                    <LinearLayout
+                        style="@style/inhead">
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:background="@drawable/store_audit_logo"
+                            style="@style/inhead_ico"/>
+                        <com.dc9_master.CustomTextView
+                            style="@style/inhead_ttl"
+                            android:text="Store Audit"/>
+                        <!--<com.dc9_bajaj.CustomTextView-->
+                        <!--android:id="@+id/text_logo"-->
+                        <!--style="@style/inhead_subttl"-->
+                        <!--android:text="Stage Name"/>-->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/btn_holdrow"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="260dp">
+
+                    <FrameLayout
+                        android:layout_weight="1"
+                        style="@style/button_frame">
+                        <com.dc9_master.CustomTextButton
+                            style="@style/btn_frm_btn"
+                            android:paddingRight="5dp"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="0dp"
+                            android:id="@+id/btn_camera"
+                            android:background="@drawable/btn_frm_btnbg2"
+                            android:text="Upload Report If Any"/>
+                    </FrameLayout>
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="260dp"
+                    style="@style/btn_holdrow"
+                    android:weightSum="2"
+                    android:layout_marginBottom="20dp">
+
+                    <FrameLayout
+                        android:layout_weight="1"
+                        style="@style/button_frame">
+
+                        <com.dc9_master.CustomTextButton
+                            android:id="@+id/finish_btn"
+                            style="@style/btn_frm_btn"
+                            android:paddingTop="0dp"
+                            android:background="@drawable/btn_frm_btnbg2"
+                            android:text="Finish"
+                            />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/multiPic"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#ece1d0">
+        <LinearLayout
+            style="@style/page_body"
+            android:orientation="vertical">
+
+
+            <com.dc9_master.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:textColor="#333"
+                android:text="Take Pictures"/>
+            <LinearLayout
+                style="@style/btn_holdrow"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="0dp"
+                android:weightSum="3">
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:text="Photo 1" />
+                </FrameLayout>
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:text="Photo 2" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:text="Photo 3" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/btn_holdrow"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="0dp"
+                android:weightSum="3">
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:text="Photo 4" />
+                </FrameLayout>
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:text="Photo 5" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:text="Photo 6" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/btn_holdrow"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="0dp"
+                android:weightSum="3">
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:text="Photo 7" />
+                </FrameLayout>
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:text="Photo 8" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:text="Photo 9" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/btn_holdrow"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="0dp"
+                android:weightSum="3">
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:text="Photo 10" />
+                </FrameLayout>
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:text="Photo 11" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:text="Photo 12" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/btn_holdrow"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="0dp"
+                android:weightSum="3">
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/ico_tik" />
+
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/done_pics"
+                        style="@style/btn_frm_btn"
+                        android:text="Done" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

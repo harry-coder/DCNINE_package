@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0">
+    <LinearLayout
+        style="@style/page_body"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:paddingBottom="286dp">
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="0dp"
+            android:background="@android:color/transparent"
+            />
+
+        <LinearLayout
+            style="@style/inhead"
+            android:layout_gravity="center_vertical">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:background="@drawable/survey_logo"
+                style="@style/inhead_ico"/>
+            <com.dc9_master.CustomTextView
+                style="@style/inhead_ttl"
+                android:text="Survey"/>
+            <!--<com.dc9_bharatnet.CustomTextView-->
+                <!--style="@style/inhead_subttl"-->
+                <!--android:text="Civil Inspection"/>-->
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/item_tab_holder">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CFBEA1"
+            android:layout_marginTop="1dp"/>
+            <!--<GridView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:id="@+id/gridView"-->
+                <!--android:numColumns="3"-->
+                <!--android:rowCount='2'-->
+                <!--android:fitsSystemWindows="true"-->
+                <!--android:columnWidth="120dp"-->
+                <!--android:stretchMode="columnWidth"-->
+                <!--android:background="@drawable/blank_site_item_btn"-->
+                <!--android:padding="0dp"-->
+                <!--android:layout_margin="0dp"-->
+                <!--android:textColor="#cccccc"-->
+                <!--android:layout_marginTop="-5dp"-->
+                <!--android:listSelector="#00000000"/>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="2">
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <com.dc9_master.CustomTextView
+                        android:id="@+id/scopeid"
+                        android:layout_height="match_parent"
+                        android:text="Attendance"
+                        style="@style/item_tab"/>
+                    <com.dc9_master.CustomTextView
+                        android:text="Survey"
+                        android:layout_height="match_parent"
+                        style="@style/item_tab"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <com.dc9_master.CustomTextView
+                        android:text="Survey Progress"
+                        android:layout_height="match_parent"
+                        style="@style/item_tab"/>
+                    <com.dc9_master.CustomTextButton
+                        android:text="Define Ring"
+                        android:layout_height="match_parent"
+                        style="@style/item_tab"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

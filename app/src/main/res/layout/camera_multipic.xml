@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0"
+    android:orientation="vertical">
+    <ScrollView
+        android:id="@+id/multiPic"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#ece1d0">
+        <LinearLayout
+            style="@style/page_body"
+            android:orientation="vertical">
+            <LinearLayout style="@style/inhead">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    style="@style/inhead_ico"
+                    android:background="@drawable/camera_logo2"/>
+
+                <com.dc9_master.CustomTextView
+                    style="@style/inhead_ttl"
+                    android:text="Take Picture"/>
+
+                <com.dc9_master.CustomTextView
+                    android:id="@+id/text_logo"
+                    style="@style/inhead_subttl"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/btn_holdrow"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="0dp"
+                android:weightSum="3">
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button"/>
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/camera_challan"
+                        style="@style/btn_frm_btn"
+                        android:text="Challan"/>
+                </FrameLayout>
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button"/>
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/camera_lr"
+                        style="@style/btn_frm_btn"
+                        android:text="LR"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button"/>
+                        <com.dc9_master.CustomTextButton
+                            android:id="@+id/camera_invoice"
+                        style="@style/btn_frm_btn"
+                        android:text="Invoice"/>
+                </FrameLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/btn_holdrow"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="0dp"
+                android:weightSum="3">
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button"/>
+
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/camera_packing"
+                        style="@style/btn_frm_btn"
+                        android:text="Packing List"/>
+                </FrameLayout>
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button"/>
+                       <com.dc9_master.CustomTextButton
+                           android:id="@+id/camera_waybill"
+                        style="@style/btn_frm_btn"
+                        android:text="Waybill"/>
+                </FrameLayout>
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/btn_holdrow"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="20dp"
+                android:weightSum="3">
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/ico_tik"/>
+
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/btn_finish"
+                        style="@style/btn_frm_btn"
+                        android:text="Done"/>
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            style="@style/page_body">
+            <LinearLayout
+                style="@style/inhead">
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:background="@drawable/receiving_inspection_logo"
+                    style="@style/inhead_ico"/>
+                <com.dc9_master.CustomTextView
+                    style="@style/inhead_ttl"
+                    android:text="Field Material Issue"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="District :"/>
+                <Spinner
+                    android:id="@+id/geographical_id"
+                    android:entries="@array/level_zone"
+                    style="@style/input_spiner"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="From Store :"/>
+                <Spinner
+                    android:id="@+id/store_id"
+                    android:entries="@array/storelist"
+                    style="@style/input_spiner"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="ISP No. :"/>
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_ispno"
+                    style="@style/input_gen"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="To Contractor :"/>
+                <Spinner
+                    android:id="@+id/tkc_id"
+                    android:entries="@array/storelist"
+                    style="@style/input_spiner"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="Store Keeper Rsp. Name :"/>
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_storeKeeperRspName"
+                    style="@style/input_gen"/>
+            </LinearLayout>
+            <com.dc9_master.CustomTextButton
+                android:id="@+id/btn_next"
+                style="@style/btn_submit"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

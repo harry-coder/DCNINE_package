@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+style="@style/alert_mainframe"
+android:layout_gravity="center">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="300dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/toast_layout_root"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="50dp"
+        android:background="#ece1d0"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:theme="@style/TextLabelGen"
+        style="@style/input_fieldset"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+       <!-- <com.demo_epmc_master.CustomTextInput
+            android:hint="Enter Value (If Any)"
+            android:id="@+id/edit1"
+            style="@style/input_gen"/>-->
+        <com.dc9_master.CustomTextInput
+            android:hint="Enter Remark (If Any)"
+            android:id="@+id/edit1"
+            style="@style/input_gen">
+            <requestFocus/>
+        </com.dc9_master.CustomTextInput>>
+    </RelativeLayout>
+    </LinearLayout>
+<ImageView
+    style="@style/alert_ico"/>
+<com.dc9_master.CustomTextButton
+    android:id="@+id/dialogButtonOK"
+    style="@style/alert_btn"
+    android:text="Got It"
+    />
+    <!--<Button-->
+        <!--android:id="@+id/dialogButtonOK"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:background="@drawable/popupbutton"-->
+        <!--android:layout_marginTop="2dp" />-->
+<com.dc9_master.CustomTextButton
+    android:id="@+id/dialogButtonNo"
+    android:visibility="gone"
+    style="@style/alert_btn_cnl"
+    android:text="Cancel"
+    />
+
+</FrameLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:layout_width="300dp"-->
+<!--android:layout_gravity="center_horizontal"-->
+<!--android:id="@+id/toast_layout_root"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:paddingTop="20dp"-->
+<!--android:paddingBottom="20dp"-->
+<!--android:background="#ece1d0"-->
+<!--android:orientation="vertical">-->
+<!--<RelativeLayout-->
+    <!--android:theme="@style/TextLabelGen"-->
+    <!--style="@style/input_fieldset"-->
+    <!--android:id="@+id/relativeLayout"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_centerHorizontal="true">-->
+    <!--<com.demo_epmc_master.CustomTextInput-->
+        <!--android:hint="Enter Value (If Any)"-->
+        <!--android:id="@+id/edit1"-->
+        <!--style="@style/input_gen"/>-->
+<!--</RelativeLayout>-->
+
+
+<!--<Button-->
+    <!--android:id="@+id/dialogButtonOK"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_gravity="right"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--android:background="@drawable/popupbutton"-->
+    <!--android:layout_marginTop="2dp" />-->
+
+<!--</LinearLayout>-->

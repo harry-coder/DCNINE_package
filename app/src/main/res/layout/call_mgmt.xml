@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                style="@style/page_body">
+
+                <LinearLayout
+                    style="@style/inhead">
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:background="@drawable/site_inspection_logo"
+                        style="@style/inhead_ico"/>
+                    <com.dc9_master.CustomTextView
+                        style="@style/inhead_ttl"
+                        android:text="Call Management"/>
+                    <!--<com.dc9_bajaj.CustomTextView-->
+                        <!--android:id="@+id/text_logo"-->
+                        <!--style="@style/inhead_subttl"-->
+                        <!--android:text="Stage Name"/>-->
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/input_fieldset">
+                    <com.dc9_master.CustomTextView
+                        style="@style/input_label"
+                        android:text="District :"/>
+                    <Spinner
+                        android:id="@+id/geographical_id"
+                        android:entries="@array/level_zone"
+                        style="@style/input_spiner"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/input_fieldset">
+                    <com.dc9_master.CustomTextView
+                        style="@style/input_label"
+                        android:text="Block :"/>
+                    <Spinner
+                        android:id="@+id/subarea_one_id"
+                        android:entries="@array/level_block"
+                        style="@style/input_spiner"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/input_fieldset">
+                    <com.dc9_master.CustomTextView
+                        style="@style/input_label"
+                        android:text="Village :"/>
+                    <Spinner
+                        android:id="@+id/subarea_two_id"
+                        android:entries="@array/level_village"
+                        style="@style/input_spiner"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/input_fieldset">
+                    <com.dc9_master.CustomTextView
+                        style="@style/input_label"
+                        android:text="Majra :"/>
+                    <Spinner
+                        android:id="@+id/subarea_three_id"
+                        android:entries="@array/level_habitation"
+                        style="@style/input_spiner"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/input_fieldset">
+                    <com.dc9_master.CustomTextView
+                        style="@style/input_label"
+                        android:text="Nature of Call :"/>
+                    <Spinner
+                        android:id="@+id/call_type"
+                        android:entries="@array/call_type"
+                        style="@style/input_spiner"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/input_fieldset">
+                    <com.dc9_master.CustomTextView
+                        style="@style/input_label"
+                        android:text="Call Details :"/>
+                    <com.dc9_master.CustomTextInput
+                        android:id="@+id/ed_call_details"
+                        style="@style/input_gen"
+                        android:inputType="textMultiLine"
+                        android:gravity="top"
+                        android:layout_height="80dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <com.dc9_master.CustomTextButton
+                android:id="@+id/btn_next"
+                style="@style/btn_submit"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

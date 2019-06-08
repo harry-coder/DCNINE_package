@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            style="@style/page_body">
+            <LinearLayout
+                style="@style/inhead">
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:background="@drawable/receiving_inspection_logo"
+                    style="@style/inhead_ico"/>
+                <com.dc9_master.CustomTextView
+                    style="@style/inhead_ttl"
+                    android:text="Field Material Receiving"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="District :"/>
+                <Spinner
+                    android:id="@+id/geographical_id"
+                    android:entries="@array/level_zone"
+                    style="@style/input_spiner"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="Block :"/>
+                <Spinner
+                    android:id="@+id/subarea_one_id"
+                    android:entries="@array/level_block"
+                    style="@style/input_spiner"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="Village :"/>
+                <Spinner
+                    android:id="@+id/subarea_two_id"
+                    android:entries="@array/level_village"
+                    style="@style/input_spiner"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="Majra :"/>
+                <Spinner
+                    android:id="@+id/subarea_three_id"
+                    android:entries="@array/level_habitation"
+                    style="@style/input_spiner"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="Nearest Landmark :"/>
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_landmark"
+                    style="@style/input_gen"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="PO No. :"/>
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_pono"
+                    style="@style/input_gen"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="DI/Invoice No. :"/>
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_dino"
+                    style="@style/input_gen"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="Material Item :"/>
+                <Spinner
+                    android:id="@+id/spinner_item_id"
+                    android:entries="@array/item_name"
+                    style="@style/input_spiner"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="DI. Qnty :"/>
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_diqty"
+                    style="@style/input_gen"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="Damaged Qnty :"/>
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_qty_damaged"
+                    style="@style/input_gen"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="Received Qnty :"/>
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_recevqty"
+                    style="@style/input_gen"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="Remark :"/>
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_remark"
+                    android:inputType="textMultiLine"
+                    android:layout_height="80dp"
+                    android:gravity="top"
+                    android:hint="Remarks"
+                    style="@style/input_gen"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/btn_holdrow"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="20dp"
+                android:weightSum="3">
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button"/>
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/btn_camera"
+                        style="@style/btn_frm_btn"
+                        android:text="Take Picture"/>
+                </FrameLayout>
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/ico_next" />
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/btn_next"
+                        style="@style/btn_frm_btn"
+                        android:text="Next Item" />
+                </FrameLayout>
+
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/ico_tik"/>
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/btn_finish"
+                        style="@style/btn_frm_btn"
+                        android:text="Finish"/>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/multiPic"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#ece1d0">
+        <LinearLayout
+            style="@style/page_body"
+            android:orientation="vertical">
+
+
+            <com.dc9_master.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:textColor="#333"
+                android:text="Take Pictures"/>
+            <LinearLayout
+                style="@style/btn_holdrow"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="0dp"
+                android:weightSum="3">
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button"/>
+
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/camera_btn1"
+                        style="@style/btn_frm_btn"
+                        android:text="Pole Photo 1"/>
+                </FrameLayout>
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/camera_btn2"
+                        style="@style/btn_frm_btn"
+                        android:text="Pole Photo 2" />
+                </FrameLayout>
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button"/>
+
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/camera_btn3"
+                        style="@style/btn_frm_btn"
+                        android:text="Pole Photo 3"/>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/btn_holdrow"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="0dp"
+                android:weightSum="3">
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/camera_btn4"
+                        style="@style/btn_frm_btn"
+                        android:text="Challan" />
+                </FrameLayout>
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button"/>
+
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/camera_btn5"
+                        style="@style/btn_frm_btn"
+                        android:text="LR"/>
+                </FrameLayout>
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/camera_btn6"
+                        style="@style/btn_frm_btn"
+                        android:text="Invoice" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/btn_holdrow"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="0dp"
+                android:weightSum="3">
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:text="Packing List" />
+                </FrameLayout>
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button"/>
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:text="Waybill"/>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/btn_holdrow"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="0dp"
+                android:weightSum="3">
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/ico_tik" />
+
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/done_pics"
+                        style="@style/btn_frm_btn"
+                        android:text="Done" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

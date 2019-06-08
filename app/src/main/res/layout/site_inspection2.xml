@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0">
+    <LinearLayout
+        style="@style/page_body">
+        <LinearLayout
+            style="@style/inhead">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:background="@drawable/site_inspection_logo"
+                style="@style/inhead_ico"/>
+            <com.dc9_master.CustomTextView
+                style="@style/inhead_ttl"
+                android:text="Site Inspection"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="District :"/>
+            <Spinner
+                android:id="@+id/geographical_id"
+                android:entries="@array/level_zone"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/parent_subarea_one_id"
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Block :"/>
+            <Spinner
+                android:id="@+id/subarea_one_id"
+                android:entries="@array/level_block"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/parent_subarea_two_id"
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Village :"/>
+            <Spinner
+                android:id="@+id/subarea_two_id"
+                android:entries="@array/level_village"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/parent_subarea_three_id"
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Majra :"/>
+            <Spinner
+                android:id="@+id/subarea_three_id"
+                android:entries="@array/level_habitation"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Nearest Landmark :"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:orientation="horizontal">
+                <com.dc9_master.CustomTextInput
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:id="@+id/ed_nearest"
+                    android:hint="Enter Nearest landmark"
+                    style="@style/input_gen"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.dc9_master.CustomTextButton
+            android:id="@+id/btn_next"
+            style="@style/btn_submit"/>
+    </LinearLayout>
+</ScrollView>

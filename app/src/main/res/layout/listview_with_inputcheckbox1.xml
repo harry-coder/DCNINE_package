@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                style="@style/rfi_listtab"
+
+                android:layout_width="match_parent">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#338F6C12"
+                    android:layout_marginBottom="3dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|fill_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.dc9_master.CustomTextView
+                        android:id="@+id/textView1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="6"
+                        android:gravity="top"
+                        android:textColor="#000000"
+                        android:textSize="12dp" />
+
+                    <com.dc9_master.CustomTextInput
+                        android:id="@+id/edtinput"
+                        style="@style/input_gen"
+                        android:layout_width="0dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="4"
+                        android:hint="Consumptions"
+                        android:inputType="numberDecimal"
+                        android:text="" />
+
+                        <CheckBox
+                            android:visibility="gone"
+                            android:id="@+id/checkBox1"
+                            android:background="@drawable/custom_checkbox"
+                            style="@style/check_roundo"/>
+
+
+                    <ImageButton
+                        android:visibility="gone"
+                        android:id="@+id/inputButton"
+                        style="@style/remark_btn"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+</LinearLayout>

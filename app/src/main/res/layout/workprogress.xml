@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0">
+    <LinearLayout
+        style="@style/page_body">
+        <LinearLayout
+            style="@style/inhead">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:background="@drawable/workprogress_logo"
+                style="@style/inhead_ico"/>
+            <com.dc9_master.CustomTextView
+                style="@style/inhead_ttl"
+                android:text="Work Progress"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="District :"/>
+            <Spinner
+                android:id="@+id/geographical_id"
+                android:entries="@array/level_zone"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/parent_subarea_one_id"
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Block :"/>
+            <Spinner
+                android:id="@+id/subarea_one_id"
+                android:entries="@array/level_block"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/parent_subarea_two_id"
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Village :"/>
+            <Spinner
+                android:id="@+id/subarea_two_id"
+                android:entries="@array/level_village"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/parent_subarea_three_id"
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Majra :"/>
+            <Spinner
+                android:id="@+id/subarea_three_id"
+                android:entries="@array/level_habitation"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+        <com.dc9_master.CustomTextButton
+            android:id="@+id/btn_next"
+            style="@style/btn_submit"/>
+    </LinearLayout>
+  </ScrollView>

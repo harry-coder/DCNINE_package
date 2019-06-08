@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0"
+    >
+    <LinearLayout
+        style="@style/page_body">
+
+        <LinearLayout
+            style="@style/inhead">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:background="@drawable/issues_logo"
+                style="@style/inhead_ico"/>
+            <com.dc9_master.CustomTextView
+                style="@style/inhead_ttl"
+                android:text="Site Issues"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="District :"/>
+            <Spinner
+                android:id="@+id/geographical_id"
+                android:entries="@array/level_zone"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Block :"/>
+            <Spinner
+                android:id="@+id/subarea_one_id"
+                android:entries="@array/level_block"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Village :"/>
+            <Spinner
+                android:id="@+id/subarea_two_id"
+                android:entries="@array/level_village"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Majra :"/>
+            <Spinner
+                android:id="@+id/subarea_three_id"
+                android:entries="@array/level_habitation"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Issue Type :"/>
+            <Spinner
+                android:id="@+id/issue_typeid"
+                android:entries="@array/issue_list"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Other Issue Name :"/>
+            <com.dc9_master.CustomTextInput
+                android:id="@+id/ed_other_issue"
+                style="@style/input_gen"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/btn_holdrow"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:weightSum="3">
+
+            <FrameLayout
+                style="@style/button_frame"
+                android:layout_weight="1">
+
+                <ImageView
+                    style="@style/btn_frm_img"
+                    android:src="@drawable/take_photo_factory_button" />
+
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/btn_camera"
+                    style="@style/btn_frm_btn"
+                    android:text="Take Picture" />
+            </FrameLayout>
+
+            <FrameLayout
+                style="@style/button_frame"
+                android:layout_weight="1">
+
+                <ImageView
+                    style="@style/btn_frm_img"
+                    android:src="@drawable/item_observation_btn" />
+
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/btn_issue"
+                    style="@style/btn_frm_btn"
+                    android:text="Issue Details" />
+            </FrameLayout>
+
+            <FrameLayout
+                style="@style/button_frame"
+                android:layout_weight="1">
+
+                <ImageView
+                    style="@style/btn_frm_img"
+                    android:src="@drawable/ico_tik" />
+
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/btn_next"
+                    style="@style/btn_frm_btn"
+                    android:text="Finish" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

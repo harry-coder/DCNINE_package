@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                style="@style/page_body">
+
+
+                <LinearLayout
+                    style="@style/inhead">
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:background="@drawable/receiving_inspection_logo"
+                        style="@style/inhead_ico"/>
+                    <com.dc9_master.CustomTextView
+                        style="@style/inhead_ttl"
+                        android:text="Inventory Status"/>
+                    <com.dc9_master.CustomTextView
+                        android:id="@+id/text_logo"
+                        style="@style/inhead_subttl"
+                        android:text="Weekly Status"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:id="@+id/list"
+                style="@style/remarkFrame">
+
+                <View
+                    android:id="@+id/lineimgid"
+                    style="@style/lineView3"></View>
+
+
+
+                <ScrollView
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="120dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            style="@style/rfi_listtab"
+                            android:layout_width="match_parent">
+                            <LinearLayout
+                                style="@style/matrow">
+                                <com.dc9_master.CustomTextView
+                                    android:text="48 Core optical fiber cable "
+                                    style="@style/matname" />
+
+                                <com.dc9_master.CustomTextView
+                                    android:text="Nos"
+                                    style="@style/matunit"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/matvalrow">
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Recieved"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Issued"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Balance"
+                                    android:inputType="number"
+                                    android:text=""/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/rfi_listtab"
+                            android:layout_width="match_parent">
+                            <LinearLayout
+                                style="@style/matrow">
+                                <com.dc9_master.CustomTextView
+                                    android:text="PLB HDPE Duct "
+                                    style="@style/matname" />
+
+                                <com.dc9_master.CustomTextView
+                                    android:text="Nos"
+                                    style="@style/matunit"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/matvalrow">
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Recieved"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Issued"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Balance"
+                                    android:inputType="number"
+                                    android:text=""/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/rfi_listtab"
+                            android:layout_width="match_parent">
+                            <LinearLayout
+                                style="@style/matrow">
+                                <com.dc9_master.CustomTextView
+                                    android:text="DWC Duct "
+                                    style="@style/matname" />
+
+                                <com.dc9_master.CustomTextView
+                                    android:text="Nos"
+                                    style="@style/matunit"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/matvalrow">
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Recieved"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Issued"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Balance"
+                                    android:inputType="number"
+                                    android:text=""/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/rfi_listtab"
+                            android:layout_width="match_parent">
+                            <LinearLayout
+                                style="@style/matrow">
+                                <com.dc9_master.CustomTextView
+                                    android:text="GI Pipe "
+                                    style="@style/matname" />
+
+                                <com.dc9_master.CustomTextView
+                                    android:text="Nos"
+                                    style="@style/matunit"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/matvalrow">
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Recieved"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Issued"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Balance"
+                                    android:inputType="number"
+                                    android:text=""/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/rfi_listtab"
+                            android:layout_width="match_parent">
+                            <LinearLayout
+                                style="@style/matrow">
+                                <com.dc9_master.CustomTextView
+                                    android:text="FDMS at Block Level "
+                                    style="@style/matname" />
+
+                                <com.dc9_master.CustomTextView
+                                    android:text="Nos"
+                                    style="@style/matunit"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/matvalrow">
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Recieved"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Issued"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Balance"
+                                    android:inputType="number"
+                                    android:text=""/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/rfi_listtab"
+                            android:layout_width="match_parent">
+                            <LinearLayout
+                                style="@style/matrow">
+                                <com.dc9_master.CustomTextView
+                                    android:text="FDMS at GP Level "
+                                    style="@style/matname" />
+
+                                <com.dc9_master.CustomTextView
+                                    android:text="Nos"
+                                    style="@style/matunit"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/matvalrow">
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Recieved"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Issued"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Balance"
+                                    android:inputType="number"
+                                    android:text=""/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/rfi_listtab"
+                            android:layout_width="match_parent">
+                            <LinearLayout
+                                style="@style/matrow">
+                                <com.dc9_master.CustomTextView
+                                    android:text="FDMS outdoor "
+                                    style="@style/matname" />
+
+                                <com.dc9_master.CustomTextView
+                                    android:text="Nos"
+                                    style="@style/matunit"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/matvalrow">
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Recieved"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Issued"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Balance"
+                                    android:inputType="number"
+                                    android:text=""/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/rfi_listtab"
+                            android:layout_width="match_parent">
+                            <LinearLayout
+                                style="@style/matrow">
+                                <com.dc9_master.CustomTextView
+                                    android:text="Joint Chamber "
+                                    style="@style/matname" />
+
+                                <com.dc9_master.CustomTextView
+                                    android:text="Nos"
+                                    style="@style/matunit"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/matvalrow">
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Recieved"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Issued"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Balance"
+                                    android:inputType="number"
+                                    android:text=""/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/rfi_listtab"
+                            android:layout_width="match_parent">
+                            <LinearLayout
+                                style="@style/matrow">
+                                <com.dc9_master.CustomTextView
+                                    android:text="Route Marker "
+                                    style="@style/matname" />
+
+                                <com.dc9_master.CustomTextView
+                                    android:text="Nos"
+                                    style="@style/matunit"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/matvalrow">
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Recieved"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Issued"
+                                    android:inputType="number"
+                                    android:text=""/>
+                                <com.dc9_master.CustomTextInput
+                                    style="@style/input_gen"
+                                    android:layout_weight="3"
+                                    android:hint="Balance"
+                                    android:inputType="number"
+                                    android:text=""/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+                <LinearLayout
+                    style="@style/btn_holdrow"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="20dp"
+                    android:weightSum="3">
+
+                    <FrameLayout
+                        style="@style/button_frame"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            style="@style/btn_frm_img"
+                            android:src="@drawable/take_photo_factory_button" />
+
+                        <com.dc9_master.CustomTextButton
+                            android:id="@+id/imageButton5"
+                            style="@style/btn_frm_btn"
+                            android:text="Take Picture" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        style="@style/button_frame"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            style="@style/btn_frm_img"
+                            android:src="@drawable/item_observation_btn" />
+
+                        <com.dc9_master.CustomTextButton
+                            android:id="@+id/imageButton6"
+                            style="@style/btn_frm_btn"
+                            android:text="Item Obsr." />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        style="@style/button_frame"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            style="@style/btn_frm_img"
+                            android:src="@drawable/ico_tik" />
+
+                        <com.dc9_master.CustomTextButton
+                            android:id="@+id/imageButton7"
+                            style="@style/btn_frm_btn"
+                            android:text="Done" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>
+
+
+

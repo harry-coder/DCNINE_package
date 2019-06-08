@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/page_body">
+
+        <LinearLayout
+            style="@style/inhead">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:background="@drawable/attendance_logo"
+                style="@style/inhead_ico"/>
+            <com.dc9_master.CustomTextView
+                style="@style/inhead_ttl"
+                android:text="Take Leave"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="From"
+                android:textColor="#333"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="To"
+                android:textColor="#333"
+                android:textSize="12dp"/>
+         </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <com.dc9_master.CustomTextView
+                android:id="@+id/ed_fromdate"
+                android:hint="From"
+                android:inputType="datetime"
+                style="@style/input_gen"
+                android:layout_width="0px"
+                android:layout_weight="1"/>
+            <com.dc9_master.CustomTextView
+                android:id="@+id/ed_todate"
+                android:hint="To"
+                android:inputType="numberDecimal"
+                style="@style/input_gen"
+                android:layout_width="0px"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="No. of Days :"/>
+            <com.dc9_master.CustomTextInput
+                android:id="@+id/ed_nodays"
+                android:inputType="numberDecimal"
+                style="@style/input_gen"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Reason :"/>
+            <com.dc9_master.CustomTextInput
+                android:id="@+id/ed_reason"
+                android:inputType="textMultiLine"
+                android:hint="Enter Reason"
+                style="@style/input_gen"
+                android:layout_height="100dp"
+                android:gravity="top"/>
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Comments (if any) :"/>
+            <com.dc9_master.CustomTextInput
+                android:id="@+id/ed_comment"
+                android:inputType="textMultiLine"
+                android:hint="Enter Reason"
+                style="@style/input_gen"
+                android:layout_height="80dp"
+                android:gravity="top"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/btn_holdrow"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:weightSum="3">
+            <FrameLayout
+                style="@style/button_frame"
+                android:layout_weight="1">
+                <ImageView
+                    style="@style/btn_frm_img"
+                    android:src="@drawable/ico_tik"/>
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/next_btn"
+                    style="@style/btn_frm_btn"
+                    android:text="Finish"/>
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

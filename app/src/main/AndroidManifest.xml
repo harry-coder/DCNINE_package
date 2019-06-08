@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dc9_master">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:name="com.dc9_master.attendance_module.GlobalClass"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:allowBackup="true"
+        android:icon="@drawable/pmc_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.dc9_master.authentication.Authentication"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.dc9_master.Upload_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity android:name="com.dc9_master.authentication.Splash" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <!--<activity  android:name="com.dc9_bajaj.Home_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>-->
+        <activity android:name="com.dc9_master.Home_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity android:name="com.dc9_master.attendance_module.Attendance_Activity1" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity android:name="com.dc9_master.attendance_module.LeaveUpload" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity android:name="com.dc9_master.clearapp_data.ClearAppDataActivity" android:windowSoftInputMode="adjustPan"  android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" android:screenOrientation="portrait" />
+        <activity android:name="com.dc9_master.sor.Site_Inspection_Parameters" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity android:name="com.dc9_master.sor.Site_Inspection_PassRework" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity android:name="com.dc9_master.sor.Site_Inspection_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.dc9_master.sor.SiteInspection_Item_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+       <activity  android:name="com.dc9_master.sor.SiteInspectionChecklist_Activity"
+            android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity  android:name="com.dc9_master.sor.SiteInspectionRemark_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.sor.SiteInspectionUpload"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.issues.Issues_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity  android:name="com.dc9_master.issues.IssueUpload" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.factory_inspection.Factory_Insp_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.factory_inspection.Factory_Insp_Item_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.factory_inspection.Factory_Insp_Report_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.factory_inspection.FactoryUpload" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.store_audit.Store_Audit_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity  android:name="com.dc9_master.store_audit.Store_Audit_Item_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.store_audit.Store_Audit_Item1_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.store_audit.Store_Audit_ReportUpload_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait" />
+        <activity  android:name="com.dc9_master.store_audit.Upload" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.dpr.DPR_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.dpr.DPR_Item_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.dpr.DPR_ItemActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity android:name="com.dc9_master.dpr.DPRUpload" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.manpower.Manpower_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity  android:name="com.dc9_master.manpower.ManpowerUpload" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.jmc.JMC_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity  android:name="com.dc9_master.jmc.JMC_Item_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.jmc.JMCUpload" android:screenOrientation="portrait"/>
+        <activity android:name="com.dc9_master.jmc.JMCParameterActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.habqc.Habqc_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity  android:name="com.dc9_master.habqc.Habqc_hhsc_Checklist_Activity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity  android:name="com.dc9_master.habqc.Habqc_HHSC_Pass_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.habqc.HHSCUpload" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.habqc.Habqc_Network_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.habqc.Habqc_Network_Item_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.habqc.Habqc_Network_QC_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.habqc.Habqc_Network_Pass_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.habqc.Habqc_Network_Checklist_Activity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity  android:name="com.dc9_master.habqc.NetworkUpload" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.material_recv1.Material_Recv_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.material_recv1.Material_Recv_Item_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.material_recv1.RecvInspectionChecklist_Activity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity  android:name="com.dc9_master.remark.Remark_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.material_recv1.MaterialUpload" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity  android:name="com.dc9_master.hoto.HOTO_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.field_issue.Field_Material_Issue_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.field_issue.Field_Material_Issue_Item_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.field_issue.Upload" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.material_mgmt.Material_In_Out_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.material_mgmt.Material_Receiving_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.material_mgmt.Material_Receiving_Item_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.material_mgmt.Material_Transfer_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.material_mgmt.Material_Transfer_Item_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity android:name="com.dc9_master.material_mgmt.MaterialIssue_UploadActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity android:name="com.dc9_master.material_mgmt.MaterialReceived_UploadActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.notification.Notification_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.notification.GrnDetailsActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+
+        <!-- <activity  android:name="com.dc9_bajaj.safety_check.Safety_Check_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_bajaj.safety_check.Safety_Check_Item" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_bajaj.safety_check.Safety_Check_Parameters" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_bajaj.safety_check.Safety_Check_PassRework" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+      -->
+
+        <activity  android:name="com.dc9_master.safety_check.Safety_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.safety_check.Safety_Item_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.safety_check.SafetyChecklist_Activity"
+            android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity  android:name="com.dc9_master.safety_check.Safety_PassRework"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.safety_check.SafetyUpload"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.pole_recv.Pole_Recv_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.pole_recv.PoleUpload" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.call_mgmt.Call_Mgmt_Activity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.call_mgmt.CallMgmtUpload" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.camera.Camera_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.camera.CameraLast_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.camera.CameraMultiPic_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.camera.Camera1_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.camera.Camera2_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.camera.Camera3_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.camera.Camera4_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.camera.Camera5_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.camera.Camera6_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.camera.Camera7_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.dc9_master.camera.Camera8_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+        <activity  android:name="com.dc9_master.camera.CameraMultiPicAll_Activity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
+
+
+        <activity
+            android:name="com.dc9_master.attendance_module.LocationActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name="com.dc9_master.attendance_module.SignatureActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity android:name="com.dc9_master.attendance_module.Signature_OUTActivity" android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name="com.dc9_master.selfiecamera.MainActivity"
+            android:label="@string/app_name">
+            <!-- <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name="com.dc9_master.selfiecamera.MainActivity_OUT"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.dc9_master.selfiecamera.CameraActivity"
+            android:label="@string/title_activity_camera">
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB6PN7LVfGTJZLJPeSb9YpDx1n4fD_3s6U"/>
+
+        <service android:name="com.dc9_master.service.BackgroundService">
+        </service>
+        <service android:name="com.dc9_master.service.CaptureService">
+        </service>
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/pageWrap"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/pageWrap"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+
+            <LinearLayout
+                style="@style/inhead">
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:background="@drawable/factory_logo"
+                    style="@style/inhead_ico"/>
+                <com.dc9_master.CustomTextView
+                    style="@style/inhead_ttl"
+                    android:text="Factory Inspection"/>
+                <com.dc9_master.CustomTextView
+                    android:id="@+id/text_logo"
+                    style="@style/inhead_subttl"
+                    android:text="Status"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/btn_holdrow"
+                android:layout_marginBottom="20dp"
+                android:layout_width="260dp">
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    style="@style/button_frame">
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="0dp"
+                        android:id="@+id/btn_frm_btn"
+                        android:background="@drawable/btn_frm_btnbg2"
+                        android:text="Upload Report If Any"
+                        />
+                </FrameLayout>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="260dp"
+                style="@style/btn_holdrow"
+                android:weightSum="2"
+                android:layout_marginBottom="20dp">
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    style="@style/button_frame">
+
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/finish_btn"
+                        style="@style/btn_frm_btn"
+                        android:paddingTop="0dp"
+                        android:background="@drawable/btn_frm_btnbg2"
+                        android:text="Finish"
+                        />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/alert_pop1"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#33000000"
+            android:gravity="center_vertical|center_horizontal">
+            <FrameLayout
+
+                style="@style/alert_mainframe">
+                <com.dc9_master.CustomTextView
+                    android:id="@+id/text"
+
+                    android:text="Are you sure you want to pass this Inspection ? "
+
+                    style="@style/alerttext"/>
+                <ImageView
+                    style="@style/alert_ico"/>
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/dialogButtonOK"
+                    style="@style/alert_btn"
+                    android:text="Yes"
+                    />
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/dialogButtonNo"
+                    style="@style/alert_btn_cnl"
+                    android:text="Cancel"/>
+
+
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

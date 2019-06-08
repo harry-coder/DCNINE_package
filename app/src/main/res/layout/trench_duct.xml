@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0"
+    >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/page_body">
+
+        <LinearLayout
+            style="@style/inhead">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:background="@drawable/trenching_logo"
+                style="@style/inhead_ico"/>
+            <com.dc9_master.CustomTextView
+                style="@style/inhead_ttl"
+                android:text="Trenching &amp; Ducting"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Cluster :"/>
+            <Spinner
+                android:id="@+id/geographical_id"
+                android:entries="@array/level_zone"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Block :"/>
+            <Spinner
+                android:id="@+id/subarea_one_id"
+                android:entries="@array/level_block"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Ring :"/>
+            <Spinner
+                android:id="@+id/subarea_two_id"
+                android:entries="@array/level_ring"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="GP :"/>
+            <Spinner
+                android:id="@+id/subarea_three_id"
+                android:entries="@array/level_GP"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Team :"/>
+            <Spinner
+                android:id="@+id/spinner_team"
+                android:entries="@array/team"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/rfi_listtab"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp">
+            <LinearLayout
+                style="@style/matvalrow">
+                <com.dc9_master.CustomTextView
+                    android:text="Used Machines Qnty"
+                    style="@style/matname"
+                    android:layout_weight="10"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            style="@style/rfi_listtab"
+            android:layout_width="match_parent">
+            <View
+                style="@style/lcview"
+                />
+            <LinearLayout
+                style="@style/matvalrow">
+                <com.dc9_master.CustomTextView
+                    android:text="HDD"
+                    style="@style/matname"
+                    android:layout_weight="6"/>
+
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_hdd"
+                    style="@style/input_gen"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:inputType="number"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/rfi_listtab"
+            android:layout_width="match_parent">
+            <View
+                style="@style/lcview"
+                />
+            <LinearLayout
+                style="@style/matvalrow">
+                <com.dc9_master.CustomTextView
+                    android:text="JCB"
+                    style="@style/matname"
+                    android:layout_weight="6"/>
+
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_jcb"
+                    style="@style/input_gen"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:inputType="number"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/rfi_listtab"
+            android:layout_width="match_parent">
+            <View
+                style="@style/lcview"
+                />
+            <LinearLayout
+                style="@style/matvalrow">
+                <com.dc9_master.CustomTextView
+                    android:text="Excavator"
+                    style="@style/matname"
+                    android:layout_weight="6"/>
+
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_excavator"
+                    style="@style/input_gen"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:inputType="number"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Soil Type :"/>
+            <Spinner
+                android:id="@+id/spinner_soil_type"
+                android:entries="@array/soil"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/next_btn"
+            style="@style/btn_submit"/>
+    </LinearLayout>
+</ScrollView>

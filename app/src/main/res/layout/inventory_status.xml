@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0"
+    >
+    <LinearLayout
+        style="@style/page_body">
+
+        <LinearLayout
+            style="@style/inhead">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:background="@drawable/receiving_inspection_logo"
+                style="@style/inhead_ico"/>
+            <com.dc9_master.CustomTextView
+                style="@style/inhead_ttl"
+                android:text="Inventory Status"/>
+            <com.dc9_master.CustomTextView
+                android:id="@+id/text_logo"
+                style="@style/inhead_subttl"
+                android:text="Weekly Status"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="District :"/>
+            <Spinner
+                android:id="@+id/project_id"
+                android:entries="@array/level_zone"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Store Name :"/>
+            <Spinner
+                android:id="@+id/geographical_id"
+                android:entries="@array/storelist"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Factory Incharge Name :"/>
+            <com.dc9_master.CustomTextInput
+                android:hint="Factory Incharge Name"
+                android:id="@+id/vendor_id"
+                style="@style/input_gen"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Date :"/>
+            <com.dc9_master.CustomTextInput
+                android:hint=""
+                android:inputType="date"
+                android:id="@+id/utility_id"
+                style="@style/input_gen"/>
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/next_btn"
+            style="@style/btn_submit"/>
+
+    </LinearLayout>
+</ScrollView>

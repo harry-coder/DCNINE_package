@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                style="@style/page_body">
+                <LinearLayout
+                    style="@style/inhead">
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:background="@drawable/receiving_inspection_logo"
+                        style="@style/inhead_ico"/>
+                    <com.dc9_master.CustomTextView
+                        style="@style/inhead_ttl"
+                        android:text="Material Receiving"/>
+                    <!--<com.dc9_bajaj.CustomTextView-->
+                    <!--android:id="@+id/text_logo"-->
+                    <!--style="@style/inhead_subttl"-->
+                    <!--android:text="Stage Name"/>-->
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/input_fieldset">
+                    <com.dc9_master.CustomTextView
+                        style="@style/input_label"
+                        android:text="Item Name :"/>
+                    <Spinner
+                        android:id="@+id/spinner_item_id"
+                        android:entries="@array/item_name"
+                        style="@style/input_spiner"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/input_fieldset">
+                    <com.dc9_master.CustomTextView
+                        style="@style/input_label"
+                        android:text="DI Qnty :"/>
+                    <com.dc9_master.CustomTextInput
+                        android:id="@+id/ed_diqty"
+                        android:inputType="numberDecimal"
+                        android:hint="DI Qnty"
+                        style="@style/input_gen"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/input_fieldset">
+                    <com.dc9_master.CustomTextView
+                        style="@style/input_label"
+                        android:text="Recvd. Qnty :"/>
+                    <com.dc9_master.CustomTextInput
+                        android:id="@+id/ed_receivedqty"
+                        android:inputType="numberDecimal"
+                        android:hint="Recvd. Qnty"
+                        style="@style/input_gen"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/input_fieldset">
+                    <com.dc9_master.CustomTextView
+                        style="@style/input_label"
+                        android:text="Rejected Qnty (Damaged/Quality):"/>
+                    <com.dc9_master.CustomTextInput
+                        android:id="@+id/ed_qty_damaged"
+                        android:inputType="numberDecimal"
+                        android:hint="Rejectd Qnty"
+                        style="@style/input_gen"/>
+                </LinearLayout>
+                <FrameLayout
+                    android:visibility="gone"
+                    style="@style/input_fieldset">
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/acptqc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Acceptance QC Report (If Any)"
+                        android:background="@drawable/btn_gen_bg"/>
+                </FrameLayout>
+                <LinearLayout
+                    style="@style/input_fieldset">
+                    <com.dc9_master.CustomTextView
+                        style="@style/input_label"
+                        android:text="Accepted Qnty :"/>
+                    <com.dc9_master.CustomTextInput
+                        android:id="@+id/ed_qty_accepted"
+                        android:inputType="numberDecimal"
+                        android:hint="Accepted Qnty"
+                        style="@style/input_gen"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/input_fieldset">
+                    <com.dc9_master.CustomTextView
+                        style="@style/input_label"
+                        android:text="Remark :"/>
+                    <com.dc9_master.CustomTextInput
+                        android:id="@+id/ed_remark"
+                        android:inputType="textMultiLine"
+                        android:layout_height="80dp"
+                        android:gravity="top"
+                        android:hint="Remarks"
+                        style="@style/input_gen"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                 style="@style/btn_holdrow"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="20dp"
+                android:weightSum="3">
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/take_photo_factory_button" />
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/btn_camera"
+                        style="@style/btn_frm_btn"
+                        android:text="Take Picture" />
+                </FrameLayout>
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/ico_next" />
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/btn_next"
+                        style="@style/btn_frm_btn"
+                        android:text="Next Item" />
+                </FrameLayout>
+                <FrameLayout
+                    style="@style/button_frame"
+                    android:layout_weight="1">
+                    <ImageView
+                        style="@style/btn_frm_img"
+                        android:src="@drawable/ico_tik" />
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/btn_finish"
+                        style="@style/btn_frm_btn"
+                        android:text="Finish" />
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout
+        android:id="@+id/ripbox"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#ece1d0">
+        <ImageButton
+            android:id="@+id/ripcls"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ico_cross"
+            android:scaleType="fitCenter"
+            android:layout_gravity="right"/>
+        <com.dc9_master.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:textColor="#333"
+            android:textSize="16dp"
+            android:text="Acceptance QC"/>
+        <ScrollView
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    style="@style/rfi_listtab">
+
+                    <FrameLayout
+                        style="@style/listview_checklin">
+                        <RelativeLayout
+                            style="@style/text_relative">
+                            <com.dc9_master.CustomTextView
+                                style="@style/listview_text"
+                                android:text="Meter should be installed with tamper proof box"/>
+                        </RelativeLayout>
+                        <LinearLayout
+                            style="@style/listview_checklin2"
+                            >
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"/>
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox_ok"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="3dp"/>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                    <View
+                        style="@style/lcview"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/rfi_listtab">
+
+                    <FrameLayout
+                        style="@style/listview_checklin">
+                        <RelativeLayout
+                            style="@style/text_relative">
+                            <com.dc9_master.CustomTextView
+                                style="@style/listview_text"
+                                android:text="Reel Insulator @1meter gap"/>
+                        </RelativeLayout>
+                        <LinearLayout
+                            style="@style/listview_checklin2"
+                            >
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"/>
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox_ok"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="3dp"/>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                    <View
+                        style="@style/lcview"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/rfi_listtab">
+
+                    <FrameLayout
+                        style="@style/listview_checklin">
+                        <RelativeLayout
+                            style="@style/text_relative">
+                            <com.dc9_master.CustomTextView
+                                style="@style/listview_text"
+                                android:text="Service cable height should be 5.8mtr across the road / 5.5m along the road/4m else whether"/>
+                        </RelativeLayout>
+                        <LinearLayout
+                            style="@style/listview_checklin2"
+                            >
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"/>
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox_ok"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="3dp"/>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                    <View
+                        style="@style/lcview"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/rfi_listtab">
+
+                    <FrameLayout
+                        style="@style/listview_checklin">
+                        <RelativeLayout
+                            style="@style/text_relative">
+                            <com.dc9_master.CustomTextView
+                                style="@style/listview_text"
+                                android:text="Use of GI Bend pipe"/>
+                        </RelativeLayout>
+                        <LinearLayout
+                            style="@style/listview_checklin2"
+                            >
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"/>
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox_ok"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="3dp"/>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                    <View
+                        style="@style/lcview"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/rfi_listtab">
+
+                    <FrameLayout
+                        style="@style/listview_checklin">
+                        <RelativeLayout
+                            style="@style/text_relative">
+                            <com.dc9_master.CustomTextView
+                                style="@style/listview_text"
+                                android:text="Connection through Piercing connector (2nos) or UDC connector (2nos) or Piercing (1no) &amp; UDC connector (1no) "/>
+                        </RelativeLayout>
+                        <LinearLayout
+                            style="@style/listview_checklin2"
+                            >
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"/>
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox_ok"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="3dp"/>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                    <View
+                        style="@style/lcview"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/rfi_listtab">
+
+                    <FrameLayout
+                        style="@style/listview_checklin">
+                        <RelativeLayout
+                            style="@style/text_relative">
+                            <com.dc9_master.CustomTextView
+                                style="@style/listview_text"
+                                android:text="Proper Earthing should be done"/>
+                        </RelativeLayout>
+                        <LinearLayout
+                            style="@style/listview_checklin2"
+                            >
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"/>
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox_ok"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="3dp"/>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                    <View
+                        style="@style/lcview"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/rfi_listtab">
+
+                    <FrameLayout
+                        style="@style/listview_checklin">
+                        <RelativeLayout
+                            style="@style/text_relative">
+                            <com.dc9_master.CustomTextView
+                                style="@style/listview_text"
+                                android:text="Meter Should be installed on external wall"/>
+                        </RelativeLayout>
+                        <LinearLayout
+                            style="@style/listview_checklin2"
+                            >
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"/>
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox_ok"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="3dp"/>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                    <View
+                        style="@style/lcview"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/rfi_listtab">
+
+                    <FrameLayout
+                        style="@style/listview_checklin">
+                        <RelativeLayout
+                            style="@style/text_relative">
+                            <com.dc9_master.CustomTextView
+                                style="@style/listview_text"
+                                android:text="Height of Meter should be 7-8ft"/>
+                        </RelativeLayout>
+                        <LinearLayout
+                            style="@style/listview_checklin2"
+                            >
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"/>
+                            <CheckBox
+                                android:background="@drawable/custom_checkbox_ok"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="3dp"/>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                    <View
+                        style="@style/lcview"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/rfi_listtab">
+
+                    <FrameLayout
+                        style="@style/listview_checklin">
+                        <RelativeLayout
+                            style="@style/text_relative">
+                            <com.dc9_master.CustomTextView
+                                style="@style/listview_text"
+                                android:text="GI Wire should be connected to pole earth"/>
+                        </RelativeLayout>
+                        <LinearLayout
+                            style="@style/listview_checklin2"
+                            >
+                            <CheckBox
+                                android:id="@+id/checkBox1"
+                                android:background="@drawable/custom_checkbox"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"/>
+                            <CheckBox
+                                android:id="@+id/checkBox2"
+                                android:background="@drawable/custom_checkbox_ok"
+                                style="@style/check_roundo"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="3dp"/>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                    <View
+                        style="@style/lcview"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            style="@style/btn_holdrow"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:weightSum="3">
+
+
+
+            <FrameLayout
+                style="@style/button_frame"
+                android:layout_weight="1">
+
+                <ImageView
+                    style="@style/btn_frm_img"
+                    android:src="@drawable/ico_tik" />
+
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/ripdone"
+                    style="@style/btn_frm_btn"
+                    android:text="Done" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

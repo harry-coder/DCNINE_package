@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0">
+    <LinearLayout style="@style/page_body">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+            <LinearLayout style="@style/inhead">
+                <LinearLayout
+                    style="@style/inhead">
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        style="@style/inhead_ico"
+                        android:background="@drawable/receiving_inspection_logo"/>
+                    <com.dc9_master.CustomTextView
+                        style="@style/inhead_ttl"
+                        android:text="Field Material Issue"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!--<Button-->
+            <!--android:id="@+id/met"-->
+            <!--style="@style/met2" />-->
+        </FrameLayout>
+        <LinearLayout
+            style="@style/rfi_listtab"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#338F6C12"/>
+            <LinearLayout
+                android:id="@+id/parentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="2dp">
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/btnAddNewItem"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_light"
+                    android:onClick="onAddNewClicked"
+                    android:text="Add Next ITem"
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/btn_holdrow"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:weightSum="3">
+            <FrameLayout
+                 style="@style/button_frame"
+                android:layout_weight="1">
+                <ImageView
+                    style="@style/btn_frm_img"
+                    android:src="@drawable/take_photo_factory_button"/>
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/btn_camera"
+                    style="@style/btn_frm_btn"
+                    android:text="Take Picture"/>
+            </FrameLayout>
+
+            <FrameLayout
+                style="@style/button_frame"
+                android:layout_weight="1">
+                <ImageView
+                    style="@style/btn_frm_img"
+                    android:src="@drawable/item_observation_btn"/>
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/btn_remark"
+                    style="@style/btn_frm_btn"
+                    android:text="Remarks"/>
+            </FrameLayout>
+
+            <FrameLayout
+                style="@style/button_frame"
+                android:layout_weight="1">
+
+                <ImageView
+                    style="@style/btn_frm_img"
+                    android:src="@drawable/ico_tik"/>
+
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/btn_finish"
+                    style="@style/btn_frm_btn"
+                    android:text="Finish"/>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

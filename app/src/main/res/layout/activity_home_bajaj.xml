@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="@drawable/main_picture">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.dc9_master.CustomTextView
+                android:id="@+id/tvVer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="right"
+                android:gravity="right|top"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/bright_foreground_inverse_material_light"/>
+
+         <!--   <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/main_picture" />
+-->
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/tabsection"
+        android:layout_weight="5">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                style="@style/tabsectionin"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    style="@style/tabsectionrow"
+                    android:weightSum="3"
+                    android:layout_height="100dp">
+                    <FrameLayout
+
+                        android:layout_weight="1"
+                        style="@style/tabsframe">
+                        <LinearLayout
+                            style="@style/tabslin">
+                            <View
+                                style="@style/tabsinview"/>
+                            <RelativeLayout
+                                style="@style/tabsico">
+                                <ImageView
+                                    style="@style/tabsico_img"
+                                    android:src="@drawable/attendance_button" />
+                            </RelativeLayout>
+                            <com.dc9_master.CustomTextView
+                                android:text="Attendance"
+                                style="@style/tabslabel"/>
+                        </LinearLayout>
+                        <ImageButton
+                            android:id="@+id/attendanceid1"
+                            style="@style/hmBtn"/>
+                    </FrameLayout>
+                    <FrameLayout
+
+                        android:layout_weight="1"
+                        style="@style/tabsframe">
+                        <LinearLayout
+                            style="@style/tabslin">
+                            <View
+                                style="@style/tabsinview"/>
+                            <RelativeLayout
+                                style="@style/tabsico">
+                                <ImageView
+                                    style="@style/tabsico_img"
+                                    android:src="@drawable/site_inspection_button" />
+                            </RelativeLayout>
+                            <com.dc9_master.CustomTextView
+                                android:text="SOR"
+                                style="@style/tabslabel"/>
+                        </LinearLayout>
+                        <ImageButton
+                            android:id="@+id/sorId"
+                            style="@style/hmBtn"/>
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_weight="1"
+                        style="@style/tabsframe">
+                        <LinearLayout
+                            style="@style/tabslin">
+                            <View
+                                style="@style/tabsinview"/>
+                            <RelativeLayout
+                                style="@style/tabsico">
+                                <ImageView
+                                    style="@style/tabsico_img"
+                                    android:src="@drawable/safety_button" />
+                            </RelativeLayout>
+                            <com.dc9_master.CustomTextView
+                                android:text="Safety Check"
+                                style="@style/tabslabel"/>
+                        </LinearLayout>
+                        <ImageButton
+                            android:id="@+id/safety_id"
+                            style="@style/hmBtn"/>
+                    </FrameLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/tabsectionrow"
+                    android:weightSum="3"
+                    android:layout_height="100dp">
+                    <FrameLayout
+                        android:layout_weight="1"
+                        style="@style/tabsframe">
+                        <LinearLayout
+                            style="@style/tabslin">
+                            <View
+                                style="@style/tabsinview"/>
+                            <RelativeLayout
+                                style="@style/tabsico">
+                                <ImageView
+                                    style="@style/tabsico_img"
+                                    android:src="@drawable/manpower_loading_button" />
+                            </RelativeLayout>
+                            <com.dc9_master.CustomTextView
+                                android:text="Daily Manpower Loading"
+                                style="@style/tabslabel"/>
+                        </LinearLayout>
+                        <ImageButton
+                            android:id="@+id/manpower_id"
+                            style="@style/hmBtn"/>
+                    </FrameLayout>
+                    <FrameLayout
+
+                        android:layout_weight="1"
+                        style="@style/tabsframe">
+                        <LinearLayout
+                            style="@style/tabslin">
+                            <View
+                                style="@style/tabsinview"/>
+                            <RelativeLayout
+                                style="@style/tabsico">
+                                <ImageView
+                                    style="@style/tabsico_img"
+                                    android:src="@drawable/site_inspection_button" />
+                            </RelativeLayout>
+                            <com.dc9_master.CustomTextView
+                                android:text="Call Mgmt"
+                                style="@style/tabslabel"/>
+                        </LinearLayout>
+                        <ImageButton
+                            android:id="@+id/call_id"
+                            style="@style/hmBtn"/>
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_weight="1"
+                        style="@style/tabsframe">
+                        <LinearLayout
+                            style="@style/tabslin">
+                            <View
+                                style="@style/tabsinview"/>
+                            <RelativeLayout
+                                style="@style/tabsico">
+                                <ImageView
+                                    style="@style/tabsico_img"
+                                    android:src="@drawable/site_inspeciton_pole_button" />
+                            </RelativeLayout>
+                            <com.dc9_master.CustomTextView
+                                android:text="Pole Receiving"
+                                style="@style/tabslabel"/>
+                        </LinearLayout>
+                        <ImageButton
+                            android:id="@+id/pole_id"
+                            style="@style/hmBtn"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/tabsectionrow"
+                    android:weightSum="3"
+                    android:layout_height="100dp">
+                    <FrameLayout
+                        android:layout_weight="1"
+                        style="@style/tabsframe">
+                        <LinearLayout
+                            style="@style/tabslin">
+                            <View
+                                style="@style/tabsinview"/>
+                            <RelativeLayout
+                                style="@style/tabsico">
+                                <ImageView
+                                    style="@style/tabsico_img"
+                                    android:src="@drawable/issues_button" />
+                            </RelativeLayout>
+                            <com.dc9_master.CustomTextView
+                                android:text="Site Issues"
+                                style="@style/tabslabel"/>
+                        </LinearLayout>
+                        <ImageButton
+                            android:id="@+id/issues_id"
+                            style="@style/hmBtn"/>
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_weight="1"
+                        style="@style/tabsframe">
+
+                        <ImageButton
+                            style="@style/hmBtn"/>
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_weight="1"
+                        style="@style/tabsframe">
+
+                        <ImageButton
+                            style="@style/hmBtn"/>
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

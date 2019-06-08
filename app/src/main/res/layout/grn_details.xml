@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/page_body"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#ece1d0">
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:id="@+id/back_btn"/>
+        <LinearLayout
+            style="@style/inhead">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:background="@drawable/receiving_inspection_logo"
+                style="@style/inhead_ico"/>
+            <com.dc9_master.CustomTextView
+                style="@style/inhead_ttl"
+                android:text="GRN Details"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="180dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.dc9_master.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/grnview"
+                        android:textColor="#000"
+                        android:text="GRN:"
+                        android:textSize="14dp"
+                        android:layout_marginBottom="5dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp">
+                    <com.dc9_master.CustomTextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/poview"
+                        android:textColor="#000"
+                        android:text="PO No."
+                        android:textSize="14dp"
+                        android:layout_marginBottom="5dp"/>
+                    <com.dc9_master.CustomTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dateview"
+                        android:text="Date"
+                        android:gravity="right"
+                        android:textColor="#000"
+                        android:textSize="12dp"
+                        android:layout_marginBottom="5dp"/>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+
+                    <ListView
+                        android:id="@+id/listView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="2dp"
+                        android:choiceMode="multipleChoice"
+                        android:divider="@android:color/transparent"
+                        android:dividerHeight="5dp"
+                        android:textSize="8px" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="vertical"
+                android:layout_gravity="bottom">
+                <RelativeLayout
+                    android:theme="@style/TextLabelGen"
+                    style="@style/input_fieldset">
+                    <com.dcnine_jakson_epc.CustomTextInput
+                        android:hint="Remarks "
+                        android:inputType="textMultiLine"
+                        android:layout_height="60dp"
+                        android:gravity="top"
+                        android:id="@+id/ed_remark"
+                        style="@style/input_gen"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutid"
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:layout_below="@+id/imageView1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <com.dcnine_jakson_epc.CustomTextButton
+                        android:id="@+id/accepeted_pop"
+                        style="@style/btn_pass"
+                        android:text="Accept"
+                        android:layout_weight="1"/>
+
+                    <com.dcnine_jakson_epc.CustomTextButton
+                        android:id="@+id/rejected_pop"
+                        style="@style/btn_rework"
+                        android:text="Reject"
+                        android:layout_weight="1"/>
+
+                    <FrameLayout
+                        style="@style/button_frame"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            style="@style/btn_frm_img"
+                            android:src="@drawable/ico_tik" />
+
+                        <com.dcnine_jakson_epc.CustomTextButton
+                            android:id="@+id/next_btn"
+                            style="@style/btn_frm_btn"
+                            android:text="Done" />
+                    </FrameLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+
+
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alert_pop1"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"
+        android:gravity="center_vertical|center_horizontal">
+        <FrameLayout
+
+            style="@style/alert_mainframe">
+            <com.dcnine_jakson_epc.CustomTextView
+                android:id="@+id/text"
+
+                android:text="Are you sure you want to Accept this GRN ? "
+
+                style="@style/alerttext"/>
+            <ImageView
+                style="@style/alert_ico"/>
+            <com.dcnine_jakson_epc.CustomTextButton
+                android:id="@+id/accepeted"
+                style="@style/alert_btn"
+                android:text="Yes"
+                />
+            <com.dcnine_jakson_epc.CustomTextButton
+                android:id="@+id/rejected"
+                android:visibility="gone"
+                style="@style/alert_btn"
+                android:text="Reject"
+                />
+
+            <com.dcnine_jakson_epc.CustomTextButton
+                android:id="@+id/dialogButtonNo"
+                style="@style/alert_btn_cnl"
+                android:text="Cancel"/>
+
+
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

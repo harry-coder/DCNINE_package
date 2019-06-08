@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            style="@style/page_body">
+            <LinearLayout
+                style="@style/inhead">
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:background="@drawable/receiving_inspection_logo"
+                    style="@style/inhead_ico"/>
+                <com.dc9_master.CustomTextView
+                    style="@style/inhead_ttl"
+                    android:text="Store Transfer"/>
+                <com.dc9_master.CustomTextView
+                    style="@style/inhead_subttl"
+                    android:text="Receive"/>
+            </LinearLayout>
+           <!-- <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="From Store :"/>
+                <Spinner
+                    android:id="@+id/geographical_id"
+                    android:entries="@array/storelist"
+                    style="@style/input_spiner"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="To Store :"/>
+                <Spinner
+                    android:id="@+id/geographical_id"
+                    android:entries="@array/storelist"
+                    style="@style/input_spiner"/>
+            </LinearLayout>
+-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="From District"
+                    android:textColor="#333"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="To District"
+                    android:textColor="#333"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <Spinner
+                    android:id="@+id/from_district_id"
+                    style="@style/input_spiner"
+                    android:layout_width="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"/>
+
+                <Spinner
+                    android:id="@+id/to_district_id"
+                    style="@style/input_spiner"
+                    android:layout_width="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="From Store"
+                    android:textColor="#333"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="To Store"
+                    android:textColor="#333"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <Spinner
+                    android:id="@+id/from_storeid"
+                    style="@style/input_spiner"
+                    android:layout_width="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"/>
+
+                <Spinner
+                    android:id="@+id/to_storeid"
+                    style="@style/input_spiner"
+                    android:layout_width="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="Receiving Date:"/>
+                <com.dc9_master.CustomTextView
+                    android:id="@+id/ed_insp_date"
+                    style="@style/input_gen"
+                    android:inputType="date"
+                    android:hint="Receiving Date"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="Receiving Note no. :"/>
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_receiving_note"
+                    style="@style/input_gen"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="Store Keeper Name :"/>
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_storekeepername"
+                    style="@style/input_gen"/>
+            </LinearLayout>
+
+            <com.dc9_master.CustomTextButton
+                android:id="@+id/btn_next"
+                style="@style/btn_submit"/>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

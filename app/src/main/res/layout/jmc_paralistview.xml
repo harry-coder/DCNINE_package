@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0">
+    <LinearLayout
+        style="@style/page_body">
+        <LinearLayout
+            style="@style/rfi_listtab">
+            <LinearLayout
+                style="@style/listview_checklinear">
+                <View
+                    style="@style/lcview" />
+                <com.dc9_master.CustomTextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#333"
+                    android:textSize="12dp"
+                    android:text="Pole"/>
+                <LinearLayout
+                    style="@style/listview_checklin3"
+                    android:paddingLeft="0dp"
+                    android:weightSum="10"
+                    android:orientation="horizontal">
+
+                    <com.dc9_master.CustomTextInput
+                        android:id="@+id/edt_insp"
+                        style="@style/input_gen"
+                        android:layout_width="236dp"
+                        android:layout_weight="5"
+                        android:hint="Inspected Qnty"
+                        android:inputType="number" />
+                    <com.dc9_master.CustomTextInput
+                        android:visibility="gone"
+                        android:id="@+id/edt_pass"
+                        style="@style/input_gen"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:inputType="number"
+                        android:hint="Passed Qnty"/>
+                    <com.dc9_master.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        style="@style/text_only"
+                        android:text="Nos"/>
+                </LinearLayout>
+             </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

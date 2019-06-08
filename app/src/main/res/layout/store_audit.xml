@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                style="@style/page_body">
+
+                <LinearLayout
+                    style="@style/inhead">
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:background="@drawable/store_audit_logo"
+                        style="@style/inhead_ico"/>
+                    <com.dc9_master.CustomTextView
+                        style="@style/inhead_ttl"
+                        android:text="Store Audit"/>
+                    <!--<com.dc9_bajaj.CustomTextView-->
+                        <!--android:id="@+id/text_logo"-->
+                        <!--style="@style/inhead_subttl"-->
+                        <!--android:text="Stage Name"/>-->
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            style="@style/input_fieldset">
+                            <com.dc9_master.CustomTextView
+                                style="@style/input_label"
+                                android:text="Date of Audit :"/>
+                            <com.dc9_master.CustomTextView
+                                android:id="@+id/ed_insp_date"
+                                style="@style/input_gen"
+                                android:inputType="date"
+                                android:hint="Date of Audit"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/input_fieldset">
+                            <com.dc9_master.CustomTextView
+                                style="@style/input_label"
+                                android:text="Store Location :"/>
+                            <Spinner
+                                android:id="@+id/store_id"
+                                android:entries="@array/storelist"
+                                style="@style/input_spiner"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/input_fieldset">
+                            <com.dc9_master.CustomTextView
+                                style="@style/input_label"
+                                android:text="PMA Name :"/>
+                            <com.dc9_master.CustomTextInput
+                                android:id="@+id/ed_pmaName"
+                                style="@style/input_gen"
+                                android:hint="PMA Name"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/input_fieldset">
+                            <com.dc9_master.CustomTextView
+                                style="@style/input_label"
+                                android:text="Store Keeper Name :"/>
+                            <com.dc9_master.CustomTextInput
+                                android:id="@+id/ed_storeKeeperName"
+                                style="@style/input_gen"
+                                android:hint="Store Keeper Name"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+            <ImageButton
+                android:id="@+id/btn_next"
+                style="@style/btn_submit"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

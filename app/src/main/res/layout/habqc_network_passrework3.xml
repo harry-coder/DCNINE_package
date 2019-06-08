@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/pageWrap"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/pageWrap"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                style="@style/inhead">
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:background="@drawable/habcq_logo"
+                    style="@style/inhead_ico"/>
+                <com.dc9_master.CustomTextView
+                    style="@style/inhead_ttl"
+                    android:text="Majra QC"/>
+                <com.dc9_master.CustomTextView
+                    style="@style/inhead_subttl"
+                    android:text="Infra"/>
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+            <!--style="@style/btn_holdrow"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_width="260dp">-->
+
+            <!--<FrameLayout-->
+            <!--android:layout_weight="1"-->
+            <!--style="@style/button_frame">-->
+            <!--<com.dc9_bajaj.CustomTextButton-->
+            <!--style="@style/btn_frm_btn"-->
+            <!--android:paddingRight="5dp"-->
+            <!--android:paddingLeft="5dp"-->
+            <!--android:paddingTop="0dp"-->
+            <!--android:id="@+id/btn_frm_btn"-->
+            <!--android:background="@drawable/btn_frm_btnbg2"-->
+            <!--android:text="Upload Report If Any"-->
+            <!--/>-->
+            <!--</FrameLayout>-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="Pole :"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="10"
+                    android:orientation="horizontal">
+                    <com.dc9_master.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:id="@+id/ed_insp_date"
+                        android:inputType="numberDecimal"
+                        android:hint="Total Qnty"
+                        style="@style/input_gen"/>
+                    <com.dc9_master.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:inputType="numberDecimal"
+                        android:hint="Inspected Qnty"
+                        style="@style/input_gen"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_fieldset">
+                <com.dc9_master.CustomTextView
+                    style="@style/input_label"
+                    android:text="Earthing :"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="10"
+                    android:orientation="horizontal">
+                    <com.dc9_master.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:id="@+id/ed_insp_date"
+                        android:inputType="numberDecimal"
+                        android:hint="Total Qnty"
+                        style="@style/input_gen"/>
+                    <com.dc9_master.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:inputType="numberDecimal"
+                        android:hint="Inspected Qnty"
+                        style="@style/input_gen"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutid"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView1"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:weightSum="2"
+                android:layout_marginBottom="10dp">
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/passId"
+                    style="@style/btn_pass"
+                    android:text="Majra Pass"
+                    android:layout_weight="1"/>
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/reworkId"
+                    style="@style/btn_rework"
+                    android:text="Majra Rework"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="260dp"
+                style="@style/btn_holdrow"
+                android:weightSum="2">
+                <FrameLayout
+                    android:layout_weight="1"
+                    style="@style/button_frame">
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/finish_btn"
+                        style="@style/btn_frm_btn"
+                        android:paddingTop="0dp"
+                        android:background="@drawable/btn_frm_btnbg2"
+                        android:text="Finish"/>
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/alert_pop1"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:gravity="center_vertical|center_horizontal">
+        <FrameLayout
+            style="@style/alert_mainframe">
+            <com.dc9_master.CustomTextView
+                android:id="@+id/text"
+                android:text="Are you sure you want to pass this Inspection ? "
+                style="@style/alerttext"/>
+            <ImageView
+                style="@style/alert_ico"/>
+            <com.dc9_master.CustomTextButton
+                android:id="@+id/dialogButtonOK"
+                style="@style/alert_btn"
+                android:text="Pass"/>
+            <com.dc9_master.CustomTextButton
+                android:id="@+id/dialogButtonOKRe"
+                style="@style/alert_btn"
+                android:text="Rework"/>
+            <com.dc9_master.CustomTextButton
+                android:id="@+id/dialogButtonNo"
+                style="@style/alert_btn_cnl"
+                android:text="Cancel"/>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

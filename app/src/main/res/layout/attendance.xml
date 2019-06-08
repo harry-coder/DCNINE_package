@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#ece1d0"
+    android:fillViewport="false">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/page_body"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:id="@+id/backpageId2"/>
+
+        <LinearLayout
+            style="@style/inhead">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:background="@drawable/attendance_logo"
+                style="@style/inhead_ico"/>
+            <com.dc9_master.CustomTextView
+                style="@style/inhead_ttl"
+                android:text="Attendance"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/punchholder">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="50dp">
+                <FrameLayout
+                    android:id="@+id/view_in"
+                    style="@style/punchframe">
+
+                    <ImageButton
+                        android:id="@+id/punch_in"
+                        style="@style/punchin"/>
+                    <com.dc9_master.CustomTextView
+                        android:text="Touch to start your day"
+                        style="@style/punchtext">
+                    </com.dc9_master.CustomTextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/view_out"
+                    style="@style/punchframe">
+                    <ImageButton
+                        android:id="@+id/punch_out"
+                        style="@style/punchout"/>
+                    <com.dc9_master.CustomTextView
+                        android:text="Touch to End your day"
+                        style="@style/punchtext">
+                    </com.dc9_master.CustomTextView>
+                </FrameLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                style="@style/punchframe">
+                <ImageButton
+                    android:id="@+id/btn_leave"
+                    style="@style/punchout"
+                    android:background="@drawable/touchleftb"/>
+                <com.dc9_master.CustomTextView
+                    android:text="Touch if on leave today"
+                    style="@style/punchtext">
+                </com.dc9_master.CustomTextView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/pending_holder"
+                android:layout_width="120dp"
+                android:layout_height="55dp"
+                style="@style/button_frame">
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/pending"
+                    style="@style/btn_frm_btn"
+                    android:paddingTop="0dp"
+                    android:background="@drawable/btn_frm_btnbg2"
+                    android:text="Pending Data"/>
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:id="@+id/tv_view"/>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- <Button
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="pending"
+             android:id="@+id/pending"
+             android:layout_alignParentTop="true"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentEnd="true" />-->
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/pop_od"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ece1d0">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+            <com.dc9_master.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#333"
+                android:layout_marginBottom="5dp"
+                android:textSize="16dp"
+                android:text="Place"/>
+            <com.dc9_master.CustomTextInput
+                android:layout_width="match_parent"
+                android:hint="Type here"
+                android:layout_height="35dp"
+                android:gravity="top"
+                android:textSize="12dp"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:background="@drawable/edittextstyle"/>
+            <com.dc9_master.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#333"
+                android:layout_marginBottom="5dp"
+                android:textSize="16dp"
+                android:text="Reason of OD"/>
+            <com.dc9_master.CustomTextInput
+                android:layout_width="match_parent"
+                android:id="@+id/ed_remark"
+                android:hint="Type here"
+                android:layout_height="100dp"
+                android:gravity="top"
+                android:textSize="12dp"
+                android:padding="5dp"
+                android:background="@drawable/edittextstyle"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="right">
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/punch_cnl"
+                    android:visibility="gone"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#B7A5CC"
+                    android:layout_gravity="right"
+                    android:text="Cancel"/>
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/punch_yes"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#A9D1C6"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="5dp"
+                    android:text="Punch In"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

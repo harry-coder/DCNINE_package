@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/page_body">
+
+        <LinearLayout
+            style="@style/inhead">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:background="@drawable/cable_blow_logo"
+                style="@style/inhead_ico"/>
+            <com.dc9_master.CustomTextView
+                style="@style/inhead_ttl"
+                android:text="Cable Blowing Progress"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Cluster :"/>
+            <Spinner
+                android:id="@+id/geographical_id"
+                android:entries="@array/level_zone"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Block :"/>
+            <Spinner
+                android:id="@+id/subarea_one_id"
+                android:entries="@array/level_block"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Ring :"/>
+            <Spinner
+                android:id="@+id/subarea_two_id"
+                android:entries="@array/level_ring"
+                style="@style/input_spiner" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="GP :"/>
+            <Spinner
+                android:id="@+id/subarea_three_id"
+                android:entries="@array/level_GP"
+                style="@style/input_spiner" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Teams :"/>
+            <Spinner
+                android:id="@+id/spinner_team"
+                android:entries="@array/team"
+                style="@style/input_spiner" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Vendor/Supplier :"/>
+            <Spinner
+                android:id="@+id/spinner_vendor"
+                android:entries="@array/array_vendor"
+                style="@style/input_spiner"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="DRUM NO. :"/>
+            <com.dc9_master.CustomTextInput
+                android:id="@+id/ed_drum_no"
+                style="@style/input_gen"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Start Point :"/>
+            <com.dc9_master.CustomTextInput
+                android:inputType="numberDecimal"
+                android:hint="Start Point"
+                android:id="@+id/ed_startpoint"
+                style="@style/input_gen"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/rfi_listtab"
+            android:layout_width="match_parent">
+            <LinearLayout
+                style="@style/matrow">
+                <com.dc9_master.CustomTextView
+                    android:text="Enter Start Point Latt. Long."
+                    style="@style/matname" />
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/matvalrow">
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_lat"
+                    style="@style/input_gen"
+                    android:layout_weight="4.5"
+                    android:hint="Latt."
+                    android:inputType="numberDecimal"
+                    android:text=""/>
+                <com.dc9_master.CustomTextInput
+                    android:id="@+id/ed_long"
+                    style="@style/input_gen"
+                    android:layout_weight="4.5"
+                    android:hint="Long."
+                    android:inputType="numberDecimal"
+                    android:text=""/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/btn_holdrow"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:weightSum="3">
+
+            <FrameLayout
+                style="@style/button_frame"
+                android:layout_weight="1">
+
+                <ImageView
+                    style="@style/btn_frm_img"
+                    android:src="@drawable/take_photo_factory_button" />
+
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/camera_btn"
+                    style="@style/btn_frm_btn"
+                    android:text="Take Instrument Picture" />
+            </FrameLayout>
+
+            <FrameLayout
+                style="@style/button_frame"
+                android:layout_weight="1">
+
+                <ImageView
+                    style="@style/btn_frm_img"
+                    android:src="@drawable/ico_tik" />
+
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/next_btn"
+                    style="@style/btn_frm_btn"
+                    android:text="Next" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

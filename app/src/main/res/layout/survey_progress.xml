@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0"
+    >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/page_body">
+
+        <LinearLayout
+            style="@style/inhead">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:background="@drawable/workprogress_logo"
+                style="@style/inhead_ico"/>
+            <com.dc9_master.CustomTextView
+                style="@style/inhead_ttl"
+                android:text="Progress"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Cluster :"/>
+            <Spinner
+                android:id="@+id/geographical_id"
+                android:entries="@array/level_zone"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Block :"/>
+            <Spinner
+                android:id="@+id/subarea_one_id"
+                android:entries="@array/level_block"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Ring :"/>
+            <Spinner
+                android:id="@+id/subarea_two_id"
+                android:entries="@array/level_block"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Team :"/>
+            <Spinner
+                android:id="@+id/spinner_team"
+                android:entries="@array/team"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Teams Working (Nos):"/>
+            <com.dc9_master.CustomTextInput
+                android:hint="Teams Working"
+                android:inputType="number"
+                android:id="@+id/ed_teamworking"
+                style="@style/input_gen"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="GP Completed (Nos):"/>
+            <com.dc9_master.CustomTextInput
+                android:id="@+id/ed_gpcompleted"
+                android:hint="GP Completed"
+                android:inputType="number"
+                style="@style/input_gen"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="WIP Blocks (Nos):"/>
+            <com.dc9_master.CustomTextInput
+                android:id="@+id/ed_wip_block"
+                android:hint="Blocks"
+                android:inputType="number"
+                style="@style/input_gen"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Survey (Km) :"/>
+            <com.dc9_master.CustomTextInput
+                android:id="@+id/ed_survey"
+                android:hint="Survey"
+                android:inputType="number"
+                style="@style/input_gen"/>
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/next_btn"
+            style="@style/btn_submit"/>
+    </LinearLayout>
+</ScrollView>

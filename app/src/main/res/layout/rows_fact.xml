@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+style="@style/rfi_listtab">
+    <LinearLayout
+    style="@style/listview_checklinear">
+
+        <Spinner
+            android:id="@+id/spinner_item_id"
+            style="@style/input_spiner"
+            android:entries="@array/item_name"/>
+        <LinearLayout
+            style="@style/listview_checklin3"
+            android:paddingLeft="0dp"
+            android:weightSum="10"
+            android:orientation="horizontal">
+            <com.dc9_master.CustomTextInput
+                android:id="@+id/ed_qty"
+                style="@style/input_gen"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:inputType="numberDecimal"
+                android:hint="Received Quantity"/>
+            <com.dc9_master.CustomTextInput
+                android:id="@+id/ed_passed_qty"
+                style="@style/input_gen"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:inputType="numberDecimal"
+                android:hint="Accepted Qnty"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

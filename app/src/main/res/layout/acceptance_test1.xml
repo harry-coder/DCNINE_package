@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece1d0"
+    >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/page_body">
+
+        <LinearLayout
+            style="@style/inhead">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:background="@drawable/acceptance_logo"
+                style="@style/inhead_ico"/>
+            <com.dc9_master.CustomTextView
+                style="@style/inhead_ttl"
+                android:text="OTDR Test"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Cluster :"/>
+            <Spinner
+                android:id="@+id/geographical_id"
+                android:entries="@array/level_zone"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Block :"/>
+            <Spinner
+                android:id="@+id/subarea_one_id"
+                android:entries="@array/level_block"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <LinearLayout
+             style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Ring :"/>
+            <Spinner
+                android:id="@+id/subarea_two_id"
+                android:entries="@array/level_ring"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="GP :"/>
+            <Spinner
+                android:id="@+id/subarea_three_id"
+                android:entries="@array/level_GP"
+                style="@style/input_spiner" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Team :"/>
+            <Spinner
+                android:id="@+id/spinner_team"
+                android:entries="@array/team"
+                style="@style/input_spiner" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/rfi_listtab"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent">
+            <View
+                style="@style/lcview"
+                />
+            <LinearLayout
+                style="@style/matvalrow">
+                <com.dc9_master.CustomTextView
+                    android:text="Start Point"
+                    style="@style/matname"
+                    android:layout_weight="2.2"/>
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.2"
+                    android:text="Block"/>
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="GP"/>
+                <Spinner
+                    android:entries="@array/level_block"
+                    style="@style/input_spiner"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.6"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/rfi_listtab"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent">
+            <View
+                style="@style/lcview"
+                />
+            <LinearLayout
+                style="@style/matvalrow">
+                <com.dc9_master.CustomTextView
+                    android:text="End Point"
+                    style="@style/matname"
+                    android:layout_weight="2.2"/>
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.2"
+                    android:text="Block"/>
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="GP"/>
+                <Spinner
+                    android:entries="@array/level_block"
+                    style="@style/input_spiner"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.6"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Cable Length (Meters):"/>
+            <com.dc9_master.CustomTextInput
+                android:id="@+id/ed_cable_length"
+                android:hint="Length"
+                android:inputType="numberDecimal"
+                style="@style/input_gen"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Loop Length (Meters):"/>
+            <com.dc9_master.CustomTextInput
+                android:inputType="numberDecimal"
+                android:id="@+id/ed_loop_length"
+                android:hint="Length"
+                style="@style/input_gen"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/input_fieldset">
+            <com.dc9_master.CustomTextView
+                style="@style/input_label"
+                android:text="Total Length (Meters):"/>
+            <com.dc9_master.CustomTextInput
+                android:id="@+id/ed_total_length"
+                android:hint="Length"
+                android:inputType="numberDecimal"
+                style="@style/input_gen"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/matvalrow"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <com.dc9_master.CustomTextView
+                android:text="OTDR Test Status"
+                style="@style/matname"
+                android:layout_weight="3"/>
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Ok"/>
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Not Ok"/>
+
+        </LinearLayout>
+        <LinearLayout
+            style="@style/btn_holdrow"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:weightSum="3">
+
+            <FrameLayout
+                style="@style/button_frame"
+                android:layout_weight="1">
+
+                <ImageView
+                    style="@style/btn_frm_img"
+                    android:src="@drawable/take_photo_factory_button" />
+
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/btn_picture"
+                    style="@style/btn_frm_btn"
+                    android:text="Take Picture" />
+            </FrameLayout>
+
+            <FrameLayout
+                style="@style/button_frame"
+                android:layout_weight="1">
+
+                <ImageView
+                    style="@style/btn_frm_img"
+                    android:src="@drawable/item_observation_btn" />
+
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/btn_observation"
+                    style="@style/btn_frm_btn"
+                    android:text="Item Obsr." />
+            </FrameLayout>
+
+            <FrameLayout
+                style="@style/button_frame"
+                android:layout_weight="1">
+
+                <ImageView
+                    style="@style/btn_frm_img"
+                    android:src="@drawable/ico_tik" />
+
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/next_btn"
+                    style="@style/btn_frm_btn"
+                    android:text="Done" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

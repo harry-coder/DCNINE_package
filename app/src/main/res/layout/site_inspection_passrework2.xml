@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/pageWrap"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/pageWrap"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <LinearLayout
+                style="@style/inhead">
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:background="@drawable/site_inspection_logo"
+                    style="@style/inhead_ico"/>
+                <com.dc9_master.CustomTextView
+                    style="@style/inhead_ttl"
+                    android:text="Site Observation"/>
+                <com.dc9_master.CustomTextView
+                    android:id="@+id/text_logo"
+                    style="@style/inhead_subttl"
+                    android:text="Status"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/btn_holdrow"
+                android:layout_marginBottom="20dp"
+                android:layout_width="260dp">
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    style="@style/button_frame">
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="0dp"
+                        android:id="@+id/btn_camera"
+                        android:background="@drawable/btn_frm_btnbg2"
+                        android:text="Upload Report If Any" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutid"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView1"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="10dp">
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/passId"
+                    style="@style/btn_pass"
+                    android:text="Minor"
+                    android:layout_weight="1"/>
+                <com.dc9_master.CustomTextButton
+                    android:id="@+id/reworkId"
+                    style="@style/btn_rework"
+                    android:text="Major"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="260dp"
+                style="@style/btn_holdrow"
+                android:weightSum="2"
+                android:layout_marginBottom="20dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    style="@style/button_frame">
+                    <com.dc9_master.CustomTextButton
+                        style="@style/btn_frm_btn"
+                        android:id="@+id/next_item_id"
+                        android:paddingTop="0dp"
+                        android:background="@drawable/btn_frm_btnbg2"
+                        android:text="Next Item" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="260dp"
+                style="@style/btn_holdrow"
+                android:weightSum="2"
+                android:layout_marginBottom="20dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    style="@style/button_frame">
+                    <com.dc9_master.CustomTextButton
+                        android:id="@+id/finish_btn"
+                        style="@style/btn_frm_btn"
+                        android:paddingTop="0dp"
+                        android:background="@drawable/btn_frm_btnbg2"
+                        android:text="Finish" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alert_pop1"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:gravity="center_vertical|center_horizontal">
+        <FrameLayout
+            style="@style/alert_mainframe">
+            <com.dc9_master.CustomTextView
+                android:id="@+id/text"
+                android:text="Are you sure this is a minor issue? "
+                style="@style/alerttext"/>
+            <ImageView
+                style="@style/alert_ico"/>
+            <com.dc9_master.CustomTextButton
+                android:id="@+id/dialogButtonOK"
+                style="@style/alert_btn"
+                android:text="OK"/>
+            <com.dc9_master.CustomTextButton
+                android:id="@+id/dialogButtonOKRe"
+                style="@style/alert_btn"
+                android:text="OK"/>
+            <com.dc9_master.CustomTextButton
+                android:id="@+id/dialogButtonNo"
+                style="@style/alert_btn_cnl"
+                android:text="Cancel"/>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>
